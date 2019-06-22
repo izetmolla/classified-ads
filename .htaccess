@@ -1,0 +1,11 @@
+RewriteEngine On
+ErrorDocument 404 /inc/theme/404.php
+
+RewriteRule   ^([A-Za-z0-9-]+)/?$ inc/load.php?slug=$1   [NC,L]
+RewriteRule   ^administrator/([A-Za-z0-9-]+)/?$ inc/load.php?adminslug=$1   [NC,L]
+RewriteRule   ^post/([A-Za-z0-9-]+)/?$ inc/load.php?post=$1   [NC,L]
+RewriteRule   ^category/([A-Za-z0-9-]+)/?$ inc/load.php?categoryslug=$1   [NC,L]
+RewriteRule   ^city/([A-Za-z0-9-]+)/?$ inc/load.php?cityslug=$1   [NC,L]
+RewriteRule   ^editpost/([A-Za-z0-9-]+)/?$ inc/load.php?editpost=$1   [NC,L]
+
+RewriteRule   ^search.php?$ inc/search.php   [NC,L]
